@@ -1,8 +1,32 @@
 const  webpackStream = require('webpack-stream')
-    , webpack = webpackStream.webpack
-    , newWebpack = require('webpack')
+    , webpack = require('webpack')
 
 module.exports = function (gulp, plugins, options) {
+    let webpackPlugins = [
+        new webpack.NoEmitOnErrorsPlugin(),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common-chunk',
+            minChunks: 2
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jquery: 'jquery',
+            jQuery: 'jquery',
+            "window.jQuery": 'jquery'
+        })
+    ];
+
+    if (options.isProd) {
+        webpackPlugins.push(
+            new webpack.optimize.UglifyJsPlugin({
+                sourceMap: true,
+                compress: {
+                    warnings: false
+                }
+            })
+        )
+    }
+
     return plugins.multipipe(
         gulp.src(options.src, {}),
         plugins.webpack({
@@ -15,7 +39,7 @@ module.exports = function (gulp, plugins, options) {
                 publicPath: options.dest,
                 filename: '[name].js'
             },
-            watch: true,
+            watch: options.watch,
             devtool: '',
             module: {
                 loaders: [{
@@ -27,24 +51,12 @@ module.exports = function (gulp, plugins, options) {
                     loader: 'babel-loader?presets[]=es2015'
                 }]
             },
-            plugins: [
-                new newWebpack.NoErrorsPlugin(),
-                new newWebpack.optimize.CommonsChunkPlugin({
-                    name: 'common-chunk',
-                    minChunks: 2
-                }),
-                new newWebpack.ProvidePlugin({
-                    $: 'jquery',
-                    jquery: 'jquery',
-                    jQuery: 'jquery',
-                    "window.jQuery": 'jquery'
-                })
-            ],
+            plugins: webpackPlugins,
             watchOptions: {
                 aggregateTimeout: 200,
                 poll: true
             }
-        }, newWebpack),
+        }, webpack),
         gulp.dest(options.dest)
     ).on('error', plugins.notify.onError(function (err) {
         return {

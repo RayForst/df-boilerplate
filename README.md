@@ -1,28 +1,27 @@
-# Gulp
+# Gulp commands
 
-gulp --env=prod - Production build
-gulp --env=dev - Dev build
-gulp --watch - Dev watch
+* gulp [flags] - Build all 
+* gulp dev [flags] - build all files
+
+###### Flags:
+
+```
+Add `--watch` to watch changes
+Add `--env=prod` to build in production
+```
 
 # Features
 
-CSS - SASS, AUTOPREFIXER, *CSSNANO
-HTML - nunjucks template engine, prepared demo structure, *html-minifier
-
-# Structure
-
-static/* - Сюда собираются все ассеты, папка в гит игноре
+CSS - SASS, AUTOPREFIXER, CSSNANO\
+HTML - Nunjucks template engine, prepared demo structure, html-minifier\
+JS - Webpack, ES6, Common-chunk, UglifyJs\
+IMAGES & SVG - Imagemin, InjectSVG
 
 
-# Todo
-Настрооить html-minifier
-Подключение текстов из .json файла
-Source-map
-Linting
-Manifest Asset version
-RetinaJs
-
-# Known issues
-
-Browsersync может работать только с теми файлами, что были добавленные перед стартом gulp, поскольку новые файлы не попадают
-в gulp watch и не отсылают свои изменения в директорию browsersync
+## TODO
+* Best setup for html-minifier
+* Text from .json
+* Source-map
+* Linting
+* Manifest Asset version
+* RetinaJs
