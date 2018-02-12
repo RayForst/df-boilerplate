@@ -1,0 +1,47 @@
+@import "components/base";
+
+body {
+  font-family: "Tahoma", sans-serif;
+  padding: 0 20px;
+  background-color: #fff;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+// Maybe we don't need some stuff from reset and normalize? Lets break theme here
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 0;
+  padding: 1.3rem 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+html, body {
+  min-height: 100%;
+
+}
+
+
+
+
+form {
+  width: 300px;
+  display: inline-flex;
+  flex-direction: column;
+  margin-right: 30px;
+
+  & > * {
+    margin-bottom: 10px;
+  }
+}
+
+form.blue {
+  color: blue;
+}

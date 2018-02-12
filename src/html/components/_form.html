@@ -1,0 +1,11 @@
+<form action="#" class="{{componentForm.extraClass}}">
+    <h4>{{componentForm.title}}</h4>
+    <input type="text" name="email" placeholder="Full-name">
+    <input type="email" name="email" placeholder="E-mail">
+
+    {% if componentForm.extraClass %}
+        <input type="text" name="addr" placeholder="Address">
+    {% endif %}
+
+    <button>Submit</button>
+</form>

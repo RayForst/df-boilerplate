@@ -1,0 +1,25 @@
+{% extends "_layout.html" %}
+
+
+{% block content %}
+    <h3>Components</h3>
+
+    <img src="/img/boots.png" alt="">
+
+    svg without inline
+    <img src="/img/test.svg" alt=""  data-skip-inject-svg="true">
+
+    svg withh inline
+    <img src="/img/test.svg" alt="">
+
+
+    {% set componentForm = { title: 'Form component example' } %}
+    {% include "components/_form.html" %}
+
+    {% set componentForm = { title: 'Same component, but with extra class and logic', extraClass: 'blue' } %}
+    {% include "components/_form.html" %}
+{% endblock %}
+
+{% block js %}
+    <script src="js/index.js?v=4"></script>
+{% endblock %}
