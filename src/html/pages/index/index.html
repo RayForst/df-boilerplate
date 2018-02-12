@@ -1,23 +1,16 @@
 {% extends "_layout.html" %}
 
+{% block css %}
+    <link rel="stylesheet" href="css/index.css">
+{% endblock%}
 
 {% block content %}
     <h3>Components</h3>
 
-    <img src="/img/boots.png" alt="">
-
-    svg without inline
-    <img src="/img/test.svg" alt=""  data-skip-inject-svg="true">
-
-    svg withh inline
-    <img src="/img/test.svg" alt="">
-
-
-    {% set componentForm = { title: 'Form component example' } %}
-    {% include "components/_form.html" %}
-
-    {% set componentForm = { title: 'Same component, but with extra class and logic', extraClass: 'blue' } %}
-    {% include "components/_form.html" %}
+    {% include "pages/build-features/_css-features.html" %}
+    {% include "pages/build-features/_html-features.html" %}
+    {% include "pages/build-features/_assets-features.html" %}
+    {% include "pages/build-features/_other-features.html" %}
 {% endblock %}
 
 {% block js %}

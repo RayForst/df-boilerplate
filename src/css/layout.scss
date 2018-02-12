@@ -1,15 +1,26 @@
 @import "components/base";
 
+html {
+  height: 100%;
+}
+
+
 body {
   font-family: "Tahoma", sans-serif;
-  padding: 0 20px;
   background-color: #fff;
   font-size: 20px;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
+.content {
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 // Maybe we don't need some stuff from reset and normalize? Lets break theme here
 
@@ -21,14 +32,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3rem;
+  padding-bottom: 50px;
 }
-
-html, body {
-  min-height: 100%;
-
-}
-
-
 
 
 form {

@@ -8,11 +8,15 @@
     <meta name="Keywords" content="Boilerplate">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/layout.css?v=4">
+    {% block css %}{% endblock %}
     <title>Boilerplate</title>
 </head>
 <body>
-    <h1>// DoubleFront boilerplate v0.1</h1>
-    {% block content %}{% endblock %}
+    <div class="content">
+        <h1>// DoubleFront boilerplate v0.1</h1>
+
+        {% block content %}{% endblock %}
+    </div>
 
     {% block footer %}
         {% include "components/_footer.html" %}

@@ -1,6 +1,7 @@
 module.exports = function (gulp, plugins, options) {
     return plugins.multipipe(
         gulp.src(options.src, {}),
+        plugins.rename({dirname: ''}),
         plugins.sass({
             includePaths: [
                 'node_modules/reset-css/',
