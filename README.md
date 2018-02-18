@@ -20,7 +20,7 @@ IMAGES & SVG - Imagemin, InjectSVG\
 
 ## TODO
 * Manifest Asset version
-* Source-map
+* Linting
 * Best setup for html-minifier
 * Text from .json
 * RetinaJs
