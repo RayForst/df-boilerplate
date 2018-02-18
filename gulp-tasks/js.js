@@ -19,7 +19,7 @@ module.exports = function (gulp, plugins, options) {
     if (options.isProd) {
         webpackPlugins.push(
             new webpack.optimize.UglifyJsPlugin({
-                sourceMap: true,
+                sourceMap: false,
                 compress: {
                     warnings: false
                 }
@@ -40,7 +40,7 @@ module.exports = function (gulp, plugins, options) {
                 filename: '[name].js'
             },
             watch: options.watch,
-            devtool: '',
+            devtool: !options.isProd ? 'cheap-module-inline-source-map' : '',
             module: {
                 loaders: [{
                     test: /\.js$/,

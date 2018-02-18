@@ -12,16 +12,15 @@
 
 # Features
 
-CSS - SASS, AUTOPREFIXER, CSSNANO\
+CSS - SASS, AUTOPREFIXER, CSSNANO, Sourcemaps\ 
 HTML - Nunjucks template engine, prepared demo structure, html-minifier\
-JS - Webpack, ES6, Common-chunk, UglifyJs\
+JS - Webpack, ES6, Common-chunk, UglifyJs, Sourcemaps\
 IMAGES & SVG - Imagemin, InjectSVG\
 +Browsersync
 
 ## TODO
+* Manifest Asset version
+* Source-map
 * Best setup for html-minifier
 * Text from .json
-* Source-map
-* Linting
-* Manifest Asset version
 * RetinaJs
