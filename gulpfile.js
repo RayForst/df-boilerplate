@@ -48,6 +48,18 @@ gulp.task('images', () => require('./gulp-tasks/images')(gulp, plugins, {
 }));
 
 
+gulp.task('video', () => require('./gulp-tasks/video')(gulp, plugins, {
+    src: CONFIG.src + "/assets/video/**/*.{mov,mp4,ogv,webm}",
+    dest: CONFIG.dest + "/video"
+}));
+
+
+gulp.task('fonts', () => require('./gulp-tasks/fonts')(gulp, plugins, {
+    src: CONFIG.src + "/assets/fonts/**/*.{ttf,otf,woff,woff2}",
+    dest: CONFIG.dest + "/fonts"
+}));
+
+
 gulp.task('clean', () => require('./gulp-tasks/clean')(gulp, plugins, {
     src: CONFIG.dest + "/*"
 }));
@@ -69,8 +81,8 @@ gulp.task('serve', function() {
     browserSync.watch(CONFIG.src+"/**/*.*").on('change', browserSync.reload);
 });
 
-gulp.task('dev', gulp.series('clean', 'images', 'css', 'html', gulp.parallel('js', 'watch', 'serve')));
+gulp.task('dev', gulp.series('clean', 'images', 'fonts', 'video', 'css', 'html', gulp.parallel('js', 'watch', 'serve')));
 
-gulp.task('default', gulp.series('clean', 'images', 'css', 'html', 'js'));
+gulp.task('default', gulp.series('clean', 'images', 'fonts', 'video', 'css', 'html', 'js'));
 
 
