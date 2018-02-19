@@ -43,7 +43,7 @@ gulp.task('html', () => require('./gulp-tasks/html')(gulp, plugins, {
 
 
 gulp.task('images', () => require('./gulp-tasks/images')(gulp, plugins, {
-    src: CONFIG.src + "/assets/img/**/*.{jpg,jpeg,png,svg}",
+    src: CONFIG.src + "/assets/img/**/*.{jpg,jpeg,png,svg,gif}",
     dest: CONFIG.dest + "/img"
 }));
 
