@@ -20,6 +20,7 @@ IMAGES & SVG - Imagemin, InjectSVG\
 
 ## TODO
 * Manifest Asset version
+* Base64 for SVG in css
 * Linting
 * Best setup for html-minifier
 * Text from .json
