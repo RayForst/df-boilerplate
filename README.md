@@ -22,6 +22,5 @@ IMAGES & SVG - Imagemin, InjectSVG,[Retina Js](https://www.npmjs.com/package/ret
 * Manifest Asset version
 * Base64 for SVG in css
 * Linting
-* Best setup for html-minifier
 * Text from .json
-* RetinaJs
+* Best setup for html-minifier
