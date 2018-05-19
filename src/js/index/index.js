@@ -1,5 +1,5 @@
-import './../main';
+import './../main'
 
-$(function(){
-    console.log('index.js');
-});
+$(() => {
+  console.log('index.js') // code goes here
+})

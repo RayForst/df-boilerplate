@@ -29,6 +29,7 @@ module.exports = function (gulp, plugins, options) {
 
     return plugins.multipipe(
         gulp.src(options.src, {}),
+        plugins.eslint(),
         plugins.webpack({
             entry: {
                 // Index
@@ -48,7 +49,10 @@ module.exports = function (gulp, plugins, options) {
                         /js\/vendor/,
                         /(node_modules|bower_components)/
                     ],
-                    loader: 'babel-loader?presets[]=es2015'
+                    loaders: [
+                        'babel-loader?presets[]=es2015',
+                        'eslint-loader'
+                    ]
                 }]
             },
             plugins: webpackPlugins,

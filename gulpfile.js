@@ -5,7 +5,6 @@ const argv = require('yargs').argv;
 const browserSync = require('browser-sync').create();
 
 plugins.multipipe = require('multipipe');
-plugins.nunjucks = require('gulp-nunjucks-html');
 plugins.pngquant = require('imagemin-pngquant');
 
 const CONFIG = {

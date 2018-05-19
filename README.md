@@ -1,3 +1,8 @@
+# Install
+
+gulp-cli -g\
+yarn install
+
 # Gulp commands
 
 * gulp [flags] - Build all 
@@ -13,7 +18,7 @@
 # Features
 
 CSS - SASS, AUTOPREFIXER, CSSNANO, Sourcemaps\
-HTML - Nunjucks template engine, prepared demo structure, html-minifier\
+HTML - twig template engine, prepared demo structure, html-minifier\
 JS - Webpack, ES6, Common-chunk, UglifyJs, Sourcemaps\
 IMAGES & SVG - Imagemin, InjectSVG,[Retina Js](https://www.npmjs.com/package/retinajs)\
 +Browsersync

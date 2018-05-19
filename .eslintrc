@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "jquery": true,
+    "es6": true
+  },
+  "rules": {
+    "semi": [
+      "error",
+      "never"
+    ]
+  },
+  "extends": [
+    "prettier",
+    "airbnb-base"
+  ]
+}

@@ -1,5 +1,5 @@
-import './../main';
+import './../main'
 
-$(function(){
-    console.log('profile.js');
+$(() => {
+  console.log('profile.js') // code goes here
 })
