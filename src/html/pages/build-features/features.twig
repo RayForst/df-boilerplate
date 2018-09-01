@@ -1,22 +1,26 @@
-{% extends "_layout.html" %}
+{% extends "_layout.twig" %}
 
 {% block css %}
     <link rel="stylesheet" href="css/features.css">
-{% endblock%}
+    {% endblock%}
 
-{% block content %}
-    <img src="/img/boots.png" alt="">
+    {% block content %}
+        <img src="/img/boots.png" alt="">
 
-    svg without inline
-    <img src="/img/test.svg" alt=""  data-skip-inject-svg="true">
+        svg without inline
+        <img src="/img/test.svg" alt="" data-skip-inject-svg="true">
 
-    svg withh inline
-    <img src="/img/test.svg" alt="">
+        svg withh inline
+        <img src="/img/test.svg" alt="">
 
+        {% set componentForm = {
+            title: 'Form component example'
+        } %}
+        {% include "components/_form.twig" %}
 
-    {% set componentForm = { title: 'Form component example' } %}
-    {% include "components/_form.html" %}
-
-    {% set componentForm = { title: 'Same component, but with extra class and logic', extraClass: 'blue' } %}
-    {% include "components/_form.html" %}
-{% endblock %}
+        {% set componentForm = {
+            title: 'Same component, but with extra class and logic',
+            extraClass: 'blue'
+        } %}
+        {% include "components/_form.twig" %}
+    {% endblock %}

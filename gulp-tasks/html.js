@@ -8,6 +8,7 @@ module.exports = function (gulp, plugins, options) {
             base: options.templateFolder
         }),
         plugins.injectSvg({ base:  '/static' }),
+                plugins.rename({dirname: ''}),
         gulp.dest(options.dest)
     ).on('error', plugins.notify.onError(function (err) {
         return {

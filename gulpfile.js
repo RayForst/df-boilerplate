@@ -31,8 +31,8 @@ gulp.task('js', () => require('./gulp-tasks/js')(gulp, plugins, {
 
 gulp.task('html', () => require('./gulp-tasks/html')(gulp, plugins, {
     src: [
-        CONFIG.src + "/html/pages/**/*.html",
-        "!"+CONFIG.src + "/html/pages/**/_*.html" // exclude partials
+        CONFIG.src + "/html/pages/**/*.twig",
+        "!"+CONFIG.src + "/html/pages/**/_*.twig" // exclude partials
     ],
     dest: CONFIG.dest + "/",
     images: CONFIG.dest,
